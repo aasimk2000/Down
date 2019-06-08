@@ -20,7 +20,8 @@ let package = Package(
         .target(
             name: "libcmark",
             dependencies: [],
-            path: "Source/cmark"),
+            path: "Source/cmark",
+            cSettings: [.unsafeFlags(["-Wno-shorten-64-to-32"])]),
         .target(
             name: "Down",
             dependencies: ["libcmark"],
